@@ -1,0 +1,6 @@
+test_ian/db
+test_ian/incremental_db
+test_ian/output_files
+test_ian/simulation
+test_ian/*.qsf
+test_ian/*.qws
