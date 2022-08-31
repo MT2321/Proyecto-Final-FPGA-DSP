@@ -1,10 +1,10 @@
-module adc_logic(clk, cs_adc, dout_adc, adc_out, out_ready);
+module adc_logic(clk, cs_adc, dout_adc, adc_out, out_ready, counter);
 	input clk;
 	input cs_adc;
 	input dout_adc;
-	output reg [12:0] adc_out;
+	output reg [11:0] adc_out;
 	output reg out_ready;
-	reg [7:0] counter;
+	output reg [7:0] counter;
 
 	initial begin
 		counter <= 0;
@@ -14,7 +14,6 @@ module adc_logic(clk, cs_adc, dout_adc, adc_out, out_ready);
 	always @(posedge clk) begin
 		if (cs_adc == 0) begin
 			if (counter != 16) begin
-
 				if (counter == 5) begin
 					adc_out[11] <= dout_adc;
 				end
@@ -47,16 +46,15 @@ module adc_logic(clk, cs_adc, dout_adc, adc_out, out_ready);
 				end
 				if (counter == 15) begin
 					adc_out[1] <= dout_adc;
-				end
-				if (counter == 16) begin
-					adc_out[0] <= dout_adc;
 					out_ready = 1;
 				end
+				counter = counter + 1;
 			end
 		end
-		if (cs_adc == 1) begin
+		else if (cs_adc == 1) begin
 			counter = 0;
 			out_ready = 0;
+			adc_out = 0;
 		end
 	end
 endmodule

@@ -4,3 +4,6 @@ test_ian/output_files
 test_ian/simulation
 test_ian/*.qsf
 test_ian/*.qws
+test_ian/*.bak
+test_ian/*.qdf
+test_ian/*.inc
