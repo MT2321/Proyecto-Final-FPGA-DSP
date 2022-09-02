@@ -17,12 +17,12 @@ ENTITY vga_sync IS
 		);
 	PORT(
 		clock	: IN STD_LOGIC;
-		x: OUT STD_LOGIC_VECTOR( integer(ceil(log2(real(width))))-1 DOWNTO 0);
-		y: OUT STD_LOGIC_VECTOR( integer(ceil(log2(real(height))))-1 DOWNTO 0);
 		hsync: OUT STD_LOGIC;
 		HE: OUT STD_LOGIC;
 		vsync: OUT STD_LOGIC;
-		VE: OUT STD_LOGIC
+		VE: OUT STD_LOGIC;
+		x: OUT STD_LOGIC_VECTOR(9 DOWNTO 0);
+		y: OUT STD_LOGIC_VECTOR(9 DOWNTO 0)
 		);
 END vga_sync;
 
@@ -49,7 +49,7 @@ BEGIN
 				h_pos := 0;						  
 			END IF;
 			
-			-- Actúo respecto los contadores H
+			-- Actï¿½o respecto los contadores H
 			IF (h_pos < line_vis) THEN
 				hsync <= '1';
 				HE	<= '1';
@@ -64,7 +64,7 @@ BEGIN
 				HE <= '0';
 			END IF;
 			
-			-- Actúo respecto los contadores V
+			-- Actï¿½o respecto los contadores V
 			IF (v_pos < frame_vis) THEN
 				vsync <= '1';
 				VE	<= '1';
@@ -79,9 +79,9 @@ BEGIN
 				VE <= '0';
 			END IF;
 			
-			-- Devuelvo la posición x,y
-			x <= std_logic_vector(to_unsigned(h_pos, x'length));
-			y <= std_logic_vector(to_unsigned(v_pos, y'length));
+			-- Devuelvo la posicion x,y
+			x <= STD_LOGIC_VECTOR(to_unsigned(h_pos, x'length));
+			y <= STD_LOGIC_VECTOR(to_unsigned(v_pos, y'length));
 		END IF;
 	END PROCESS;
 END Behavior;
