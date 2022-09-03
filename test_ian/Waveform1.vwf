@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -621,7 +623,9 @@ TRANSITION_LIST("r_addr[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 185.0;
+		LEVEL 0 FOR 65.0;
+		LEVEL 1 FOR 80.0;
+		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 55.0;
 	}
@@ -632,8 +636,9 @@ TRANSITION_LIST("r_addr[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 145.0;
-		LEVEL 1 FOR 20.0;
+		LEVEL 1 FOR 45.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 60.0;
 		LEVEL 0 FOR 60.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 55.0;
@@ -645,9 +650,11 @@ TRANSITION_LIST("r_addr[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 135.0;
-		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 45.0;
+		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 40.0;
@@ -660,8 +667,8 @@ TRANSITION_LIST("r_addr[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 135.0;
-		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 125.0;
+		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 155.0;
 	}
 }
@@ -671,7 +678,9 @@ TRANSITION_LIST("r_addr[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 185.0;
+		LEVEL 0 FOR 65.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 95.0;
 	}
@@ -682,8 +691,9 @@ TRANSITION_LIST("r_addr[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 145.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 1 FOR 65.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 100.0;
 		LEVEL 0 FOR 20.0;
 		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 55.0;
@@ -695,8 +705,9 @@ TRANSITION_LIST("r_addr[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 135.0;
-		LEVEL 1 FOR 90.0;
+		LEVEL 1 FOR 105.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 100.0;
 		LEVEL 0 FOR 75.0;
 	}
 }
@@ -706,7 +717,9 @@ TRANSITION_LIST("r_addr[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 185.0;
+		LEVEL 0 FOR 65.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 100.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 95.0;
 	}
@@ -717,7 +730,10 @@ TRANSITION_LIST("r_addr[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 145.0;
+		LEVEL 1 FOR 45.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 20.0;
 		LEVEL 0 FOR 40.0;
 		LEVEL 1 FOR 20.0;
@@ -730,8 +746,9 @@ TRANSITION_LIST("r_addr[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 135.0;
-		LEVEL 1 FOR 50.0;
+		LEVEL 1 FOR 65.0;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 40.0;
 		LEVEL 0 FOR 115.0;
 	}
 }
@@ -755,8 +772,7 @@ TRANSITION_LIST("r_clk_en")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 135.0;
-		LEVEL 1 FOR 165.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
 
@@ -765,8 +781,7 @@ TRANSITION_LIST("re")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 135.0;
-		LEVEL 1 FOR 165.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
 
@@ -1089,8 +1104,7 @@ TRANSITION_LIST("we")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 135.0;
-		LEVEL 0 FOR 165.0;
+		LEVEL 1 FOR 300.0;
 	}
 }
 
