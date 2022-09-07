@@ -22,7 +22,7 @@ https://fpgasoftware.intel.com/eula.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 320 208 488 224)
+	(rect 192 208 360 224)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "w_clk" (rect 5 0 32 12)(font "Arial" ))
 	(pt 168 8)
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 320 240 488 256)
+	(rect 192 256 360 272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "r_clk" (rect 5 0 28 17)(font "Intel Clear" ))
+	(text "ONE" (rect 5 0 26 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -54,9 +54,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 320 256 488 272)
+	(rect 192 192 360 208)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "ONE" (rect 5 0 27 17)(font "Intel Clear" ))
+	(text "value[11..0]" (rect 5 0 61 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -70,9 +70,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 320 192 488 208)
+	(rect 192 288 360 304)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "value[11..0]" (rect 5 0 62 17)(font "Intel Clear" ))
+	(text "VGA_CLK" (rect 5 0 55 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -83,28 +83,44 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
-)
-(pin
-	(input)
-	(rect 304 224 488 240)
-	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
-	(text "relative_addr[9..0]" (rect 5 0 93 17)(font "Intel Clear" ))
-	(pt 184 8)
-	(drawing
-		(line (pt 100 12)(pt 125 12))
-		(line (pt 100 4)(pt 125 4))
-		(line (pt 129 8)(pt 184 8))
-		(line (pt 100 12)(pt 100 4))
-		(line (pt 125 4)(pt 129 8))
-		(line (pt 125 12)(pt 129 8))
-	)
-	(text "VCC" (rect 144 7 164 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
-	(rect 808 192 984 208)
+	(rect 1152 456 1328 472)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "mem_out[11..0]" (rect 90 0 165 17)(font "Intel Clear" ))
+	(text "V_SYNC" (rect 90 0 134 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1152 424 1328 440)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "H_SYNC" (rect 90 0 136 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1144 192 1320 208)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "PIXEL_VALUE" (rect 90 0 157 17)(font "Intel Clear" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -166,30 +182,219 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 256 112))
 	)
 )
+(symbol
+	(rect 912 168 1096 248)
+	(text "pixel_discriminator" (rect 5 0 95 12)(font "Arial" ))
+	(text "inst2" (rect 8 64 30 81)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "value[11..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "value[11..0]" (rect 21 27 80 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixel_y[9..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "pixel_y[9..0]" (rect 21 43 82 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 184 32)
+		(output)
+		(text "out_pixel" (rect 0 0 43 12)(font "Arial" ))
+		(text "out_pixel" (rect 127 27 170 39)(font "Arial" ))
+		(line (pt 184 32)(pt 168 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 64))
+	)
+)
+(symbol
+	(rect 648 400 792 544)
+	(text "vga_sync" (rect 5 0 54 12)(font "Arial" ))
+	(text "inst3" (rect 8 128 30 145)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clock" (rect 0 0 25 12)(font "Arial" ))
+		(text "clock" (rect 21 27 46 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 144 32)
+		(output)
+		(text "hsync" (rect 0 0 30 12)(font "Arial" ))
+		(text "hsync" (rect 98 27 128 39)(font "Arial" ))
+		(line (pt 144 32)(pt 128 32))
+	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "HE" (rect 0 0 15 12)(font "Arial" ))
+		(text "HE" (rect 111 43 126 55)(font "Arial" ))
+		(line (pt 144 48)(pt 128 48))
+	)
+	(port
+		(pt 144 64)
+		(output)
+		(text "vsync" (rect 0 0 31 12)(font "Arial" ))
+		(text "vsync" (rect 97 59 128 71)(font "Arial" ))
+		(line (pt 144 64)(pt 128 64))
+	)
+	(port
+		(pt 144 80)
+		(output)
+		(text "VE" (rect 0 0 14 12)(font "Arial" ))
+		(text "VE" (rect 112 75 126 87)(font "Arial" ))
+		(line (pt 144 80)(pt 128 80))
+	)
+	(port
+		(pt 144 96)
+		(output)
+		(text "x[9..0]" (rect 0 0 31 12)(font "Arial" ))
+		(text "x[9..0]" (rect 97 91 128 103)(font "Arial" ))
+		(line (pt 144 96)(pt 128 96)(line_width 3))
+	)
+	(port
+		(pt 144 112)
+		(output)
+		(text "y[9..0]" (rect 0 0 33 12)(font "Arial" ))
+		(text "y[9..0]" (rect 96 107 129 119)(font "Arial" ))
+		(line (pt 144 112)(pt 128 112)(line_width 3))
+	)
+	(parameter
+		"pix_clk"
+		"40000000"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"width"
+		"800"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"h_fp"
+		"40"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"h_sp"
+		"128"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"h_bp"
+		"88"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"height"
+		"600"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"v_fp"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"v_sp"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"v_bp"
+		"23"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 128 128))
+	)
+	(annotation_block (parameter)(rect 648 296 792 400))
+)
+(connector
+	(pt 360 216)
+	(pt 528 216)
+)
+(connector
+	(pt 360 264)
+	(pt 528 264)
+)
+(connector
+	(text "VGA_CLK" (rect 370 280 417 297)(font "Intel Clear" (color 0 0 0)(bold)))
+	(pt 360 296)
+	(pt 440 296)
+	(color 0 0 0)
+)
+(connector
+	(text "VGA_CLK" (rect 578 416 625 433)(font "Intel Clear" (color 0 0 0)(bold)))
+	(pt 568 432)
+	(pt 648 432)
+	(color 0 0 0)
+)
+(connector
+	(pt 792 432)
+	(pt 1152 432)
+)
+(connector
+	(pt 792 464)
+	(pt 1152 464)
+)
+(connector
+	(pt 360 200)
+	(pt 528 200)
+	(bus)
+	(color 255 85 0)
+)
+(connector
+	(pt 1096 200)
+	(pt 1144 200)
+	(color 255 85 0)
+)
+(connector
+	(text "VGA_CLK" (rect 434 232 481 249)(font "Intel Clear" (color 0 0 0)(bold)))
+	(pt 416 248)
+	(pt 528 248)
+	(color 0 0 0)
+)
+(connector
+	(text "PIXEL_X_POS[9..0]" (rect 434 216 528 233)(font "Intel Clear" (color 0 85 0)(bold)))
+	(pt 416 232)
+	(pt 528 232)
+	(bus)
+	(color 0 85 0)
+)
+(connector
+	(text "PIXEL_X_POS[9..0]" (rect 802 480 896 497)(font "Intel Clear" (color 0 85 0)(bold)))
+	(pt 896 496)
+	(pt 792 496)
+	(bus)
+	(color 0 85 0)
+)
+(connector
+	(text "PIXEL_Y_POS[9..0]" (rect 802 496 896 513)(font "Intel Clear" (color 0 85 0)(bold)))
+	(pt 896 512)
+	(pt 792 512)
+	(bus)
+	(color 0 85 0)
+)
+(connector
+	(text "PIXEL_Y_POS[9..0]" (rect 818 200 912 217)(font "Intel Clear" (color 0 85 0)(bold)))
+	(pt 808 216)
+	(pt 912 216)
+	(bus)
+	(color 0 85 0)
+)
 (connector
 	(pt 800 200)
-	(pt 808 200)
+	(pt 912 200)
 	(bus)
+	(color 255 85 0)
 )
-(connector
-	(pt 528 200)
-	(pt 488 200)
-	(bus)
-)
-(connector
-	(pt 528 216)
-	(pt 488 216)
-)
-(connector
-	(pt 528 232)
-	(pt 488 232)
-	(bus)
-)
-(connector
-	(pt 528 248)
-	(pt 488 248)
-)
-(connector
-	(pt 528 264)
-	(pt 488 264)
-)
+(text "Por como esta diagramado ahora, deberia funcionar, sin embargo" (rect 160 352 561 371)(font "Intel Clear" (color 0 0 0)(font_size 8)(bold)))
+(text "como hay un cierto delay de 3 ciclos de r_clk en la memoria desde que se empieza a leer" (rect 160 368 699 387)(font "Intel Clear" (color 0 0 0)(font_size 8)(bold)))
+(text "hasta que se termina, la imagen se vera defasada hacia la derecha" (rect 160 384 560 403)(font "Intel Clear" (color 0 0 0)(font_size 8)(bold)))
+(text "Como solucion facil, se puede hacer un bloque de resta que reste 3 posiciones" (rect 160 400 639 419)(font "Intel Clear" (color 0 0 0)(font_size 8)(bold)))
+(text "en el PIXEL_X_POS que entra al graph memory" (rect 160 416 446 435)(font "Intel Clear" (color 0 0 0)(font_size 8)(bold)))
