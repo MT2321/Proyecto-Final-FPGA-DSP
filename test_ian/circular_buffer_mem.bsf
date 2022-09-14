@@ -55,8 +55,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 224 32)
 		(output)
-		(text "r_addr[9..0]" (rect 0 0 47 12)(font "Arial" ))
-		(text "r_addr[9..0]" (rect 156 27 203 39)(font "Arial" ))
+		(text "r_addr[19..0]" (rect 0 0 50 12)(font "Arial" ))
+		(text "r_addr[19..0]" (rect 153 27 203 39)(font "Arial" ))
 		(line (pt 224 32)(pt 208 32)(line_width 3))
 	)
 	(port
@@ -69,8 +69,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 224 64)
 		(output)
-		(text "w_addr[9..0]" (rect 0 0 49 12)(font "Arial" ))
-		(text "w_addr[9..0]" (rect 154 59 203 71)(font "Arial" ))
+		(text "w_addr[19..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "w_addr[19..0]" (rect 150 59 203 71)(font "Arial" ))
 		(line (pt 224 64)(pt 208 64)(line_width 3))
 	)
 	(drawing

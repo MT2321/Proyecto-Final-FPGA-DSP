@@ -4,11 +4,11 @@ module circular_buffer_mem(w_val,w_clk,relative_addr,r_clk, r_addr, data, w_addr
 	input [9:0] relative_addr;
 	input r_clk;
 	output reg [11:0] data;
-	output reg [9:0] r_addr;
-	output reg [9:0] w_addr;
+	output reg [19:0] r_addr;
+	output reg [19:0] w_addr;
 
-    reg [9:0] relative_addr_init;
-	reg [9:0] next_available_addr;
+    reg [19:0] relative_addr_init;
+	reg [19:0] next_available_addr;
     reg initial_sec;
 	localparam buffer_len = 800;                            //Tamaño del buffer
 
@@ -38,7 +38,7 @@ module circular_buffer_mem(w_val,w_clk,relative_addr,r_clk, r_addr, data, w_addr
 	end
 
     always @(posedge r_clk) begin                           // Clock de lectura
-        r_addr = relative_addr_init + relative_addr;        // El addr de lectura es el inicial + el relativo
+        r_addr = relative_addr_init + relative_addr + 3;    // El addr de lectura es el inicial + el relativo, se agrega un 3 por el defasaje del clock
         if (r_addr >= buffer_len) begin                     // Si el addr de lectura es mayor o igual al tamaño del buffer
             r_addr = r_addr - buffer_len;                   // El addr de lectura es el addr de lectura - el tamaño del buffer
         end
