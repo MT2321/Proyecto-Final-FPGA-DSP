@@ -1,0 +1,128 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 424 240)
+	(text "FilterBank" (rect 5 0 76 20)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 201 31 220)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "FILTER_CLK" (rect 0 0 83 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_CLK" (rect 21 27 104 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "FILTER_CLK_ENB" (rect 0 0 120 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_CLK_ENB" (rect 21 43 141 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "FILTER_RST" (rect 0 0 84 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_RST" (rect 21 59 105 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "FILTER_SAMPLES_IN[11..0]" (rect 0 0 192 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_SAMPLES_IN[11..0]" (rect 21 75 213 95)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 408 32)
+		(output)
+		(text "FILTER_1_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_1_OUT[11..0]" (rect 236 27 387 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 32)(pt 392 32)(line_width 3))
+	)
+	(port
+		(pt 408 48)
+		(output)
+		(text "FILTER_2_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_2_OUT[11..0]" (rect 236 43 387 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 48)(pt 392 48)(line_width 3))
+	)
+	(port
+		(pt 408 64)
+		(output)
+		(text "FILTER_3_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_3_OUT[11..0]" (rect 236 59 387 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 64)(pt 392 64)(line_width 3))
+	)
+	(port
+		(pt 408 80)
+		(output)
+		(text "FILTER_4_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_4_OUT[11..0]" (rect 236 75 387 95)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 80)(pt 392 80)(line_width 3))
+	)
+	(port
+		(pt 408 96)
+		(output)
+		(text "FILTER_5_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_5_OUT[11..0]" (rect 236 91 387 111)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 96)(pt 392 96)(line_width 3))
+	)
+	(port
+		(pt 408 112)
+		(output)
+		(text "FILTER_6_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_6_OUT[11..0]" (rect 236 107 387 127)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 112)(pt 392 112)(line_width 3))
+	)
+	(port
+		(pt 408 128)
+		(output)
+		(text "FILTER_7_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_7_OUT[11..0]" (rect 236 123 387 143)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 128)(pt 392 128)(line_width 3))
+	)
+	(port
+		(pt 408 144)
+		(output)
+		(text "FILTER_8_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_8_OUT[11..0]" (rect 236 139 387 159)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 144)(pt 392 144)(line_width 3))
+	)
+	(port
+		(pt 408 160)
+		(output)
+		(text "FILTER_9_OUT[11..0]" (rect 0 0 151 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_9_OUT[11..0]" (rect 236 155 387 175)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 160)(pt 392 160)(line_width 3))
+	)
+	(port
+		(pt 408 176)
+		(output)
+		(text "FILTER_10_OUT[11..0]" (rect 0 0 160 20)(font "Intel Clear" (font_size 8)))
+		(text "FILTER_10_OUT[11..0]" (rect 227 171 387 191)(font "Intel Clear" (font_size 8)))
+		(line (pt 408 176)(pt 392 176)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 392 208))
+	)
+)

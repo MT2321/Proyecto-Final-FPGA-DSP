@@ -1,0 +1,177 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 384 240)
+	(text "ScalerBlock" (rect 5 0 87 20)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 201 31 220)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "PRESCALER[15..0]" (rect 0 0 126 20)(font "Intel Clear" (font_size 8)))
+		(text "PRESCALER[15..0]" (rect 21 27 147 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "SCALER_1_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_1_IN[41..0]" (rect 21 43 161 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "SCALER_2_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_2_IN[41..0]" (rect 21 59 161 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "SCALER_3_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_3_IN[41..0]" (rect 21 75 161 95)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "SCALER_4_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_4_IN[41..0]" (rect 21 91 161 111)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "SCALER_5_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_5_IN[41..0]" (rect 21 107 161 127)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "SCALER_6_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_6_IN[41..0]" (rect 21 123 161 143)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "SCALER_7_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_7_IN[41..0]" (rect 21 139 161 159)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "SCALER_8_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_8_IN[41..0]" (rect 21 155 161 175)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "SCALER_9_IN[41..0]" (rect 0 0 140 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_9_IN[41..0]" (rect 21 171 161 191)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 176)(pt 16 176)(line_width 3))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "SCALER_10_IN[41..0]" (rect 0 0 149 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_10_IN[41..0]" (rect 21 187 170 207)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 192)(pt 16 192)(line_width 3))
+	)
+	(port
+		(pt 368 32)
+		(output)
+		(text "SCALER_1_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_1_OUT[11..0]" (rect 191 27 347 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 32)(pt 352 32)(line_width 3))
+	)
+	(port
+		(pt 368 48)
+		(output)
+		(text "SCALER_2_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_2_OUT[11..0]" (rect 191 43 347 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 48)(pt 352 48)(line_width 3))
+	)
+	(port
+		(pt 368 64)
+		(output)
+		(text "SCALER_3_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_3_OUT[11..0]" (rect 191 59 347 79)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 64)(pt 352 64)(line_width 3))
+	)
+	(port
+		(pt 368 80)
+		(output)
+		(text "SCALER_4_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_4_OUT[11..0]" (rect 191 75 347 95)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 80)(pt 352 80)(line_width 3))
+	)
+	(port
+		(pt 368 96)
+		(output)
+		(text "SCALER_5_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_5_OUT[11..0]" (rect 191 91 347 111)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 96)(pt 352 96)(line_width 3))
+	)
+	(port
+		(pt 368 112)
+		(output)
+		(text "SCALER_6_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_6_OUT[11..0]" (rect 191 107 347 127)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 112)(pt 352 112)(line_width 3))
+	)
+	(port
+		(pt 368 128)
+		(output)
+		(text "SCALER_7_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_7_OUT[11..0]" (rect 191 123 347 143)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 128)(pt 352 128)(line_width 3))
+	)
+	(port
+		(pt 368 144)
+		(output)
+		(text "SCALER_8_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_8_OUT[11..0]" (rect 191 139 347 159)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 144)(pt 352 144)(line_width 3))
+	)
+	(port
+		(pt 368 160)
+		(output)
+		(text "SCALER_9_OUT[11..0]" (rect 0 0 156 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_9_OUT[11..0]" (rect 191 155 347 175)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 160)(pt 352 160)(line_width 3))
+	)
+	(port
+		(pt 368 176)
+		(output)
+		(text "SCALER_10_OUT[11..0]" (rect 0 0 166 20)(font "Intel Clear" (font_size 8)))
+		(text "SCALER_10_OUT[11..0]" (rect 181 171 347 191)(font "Intel Clear" (font_size 8)))
+		(line (pt 368 176)(pt 352 176)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 352 208))
+	)
+)
