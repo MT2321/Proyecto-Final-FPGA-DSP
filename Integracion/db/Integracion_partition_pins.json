@@ -4,23 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "pin_name1",
+					"name" : "PIX",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name2",
+					"name" : "H_SYNC",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name3",
+					"name" : "V_SYNC",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name4",
+					"name" : "DOUT",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name5",
+					"name" : "CS",
 					"strict" : false
 				}
 			]

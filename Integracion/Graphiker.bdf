@@ -283,7 +283,7 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 128 128))
 	)
-	(annotation_block (parameter)(rect 704 344 760 400))
+	(annotation_block (parameter)(rect 264 464 568 768))
 )
 (symbol
 	(rect 904 120 1088 200)

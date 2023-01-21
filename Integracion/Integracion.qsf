@@ -77,4 +77,13 @@ set_global_assignment -name BDF_FILE PowerCalculator.bdf
 set_global_assignment -name BDF_FILE GraphMemory.bdf
 set_global_assignment -name BDF_FILE Graphiker.bdf
 set_global_assignment -name BDF_FILE ScalerBlock.bdf
+set_global_assignment -name QIP_FILE VGA_CLOCK_CONFIG.qip
+set_location_assignment PIN_A10 -to CS
+set_location_assignment PIN_B10 -to ADDR[0]
+set_location_assignment PIN_A9 -to DOUT
+set_location_assignment PIN_B14 -to ADC_CLK
+set_location_assignment PIN_R8 -to CLK
+set_location_assignment PIN_D3 -to H_SYNC
+set_location_assignment PIN_C3 -to V_SYNC
+set_location_assignment PIN_A3 -to PIX
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

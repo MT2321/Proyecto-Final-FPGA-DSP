@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Jan 21 19:43:47 2023
+Analysis & Synthesis Status : Successful - Sat Jan 21 20:31:47 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Integracion
 Top-level Entity Name : Integracion
 Family : Cyclone IV E
-Total logic elements : 1,979
-    Total combinational functions : 1,959
-    Dedicated logic registers : 130
-Total registers : 130
-Total pins : 33
+Total logic elements : 2,059
+    Total combinational functions : 2,015
+    Dedicated logic registers : 192
+Total registers : 192
+Total pins : 10
 Total virtual pins : 0
 Total memory bits : 393,216
 Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total PLLs : 1
