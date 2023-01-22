@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sat Jan 21 20:32:13 2023
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fitter Status : Successful - Sun Jan 22 15:15:57 2023
+Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : Integracion
 Top-level Entity Name : Integracion
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 2,052 / 22,320 ( 9 % )
-    Total combinational functions : 2,016 / 22,320 ( 9 % )
-    Dedicated logic registers : 192 / 22,320 ( < 1 % )
-Total registers : 192
+Total logic elements : 2,076 / 22,320 ( 9 % )
+    Total combinational functions : 2,024 / 22,320 ( 9 % )
+    Dedicated logic registers : 193 / 22,320 ( < 1 % )
+Total registers : 193
 Total pins : 10 / 154 ( 6 % )
 Total virtual pins : 0
 Total memory bits : 393,216 / 608,256 ( 65 % )

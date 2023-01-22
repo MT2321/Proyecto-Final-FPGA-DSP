@@ -9,7 +9,7 @@ module roll(value, clk, val_out, w_clk, one);
 	 output reg one;
     reg [15:0] counter;
 	 
-	 localparam prescaler = 1;
+	 localparam prescaler = 1900;
 
 	initial begin
         counter <= 0;                   // inicializamos el contador
