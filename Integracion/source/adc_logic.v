@@ -1,4 +1,4 @@
-module adc_logic(clk, cs_adc, dout_adc, adc_out, addr_adc, out_ready, counter);
+module adc_logic(clk, cs_adc, dout_adc, adc_out, addr_adc, out_ready, counter, one);
 	input clk;
 	input cs_adc;
 	input dout_adc;
@@ -6,11 +6,13 @@ module adc_logic(clk, cs_adc, dout_adc, adc_out, addr_adc, out_ready, counter);
 	output reg out_ready;
 	output reg [7:0] counter;
 	output reg [2:0] addr_adc;
+	output reg one;
 
 	initial begin
 		counter <= 0;
 		out_ready <= 0;
 		addr_adc <= 0; //Siempre elegimos la primera entrada IN0
+		one <= 1;
 	end
 	
 	always @(posedge clk) begin

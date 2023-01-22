@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at adc_logic.v(16): always construct contains both blocking and non-blocking assignments File: C:/Users/mrspa/Documents/Repos/ME/Proyecto-Final-FPGA-DSP/Integracion/source/adc_logic.v Line: 16
+Warning (10268): Verilog HDL information at adc_logic.v(18): always construct contains both blocking and non-blocking assignments File: C:/Users/idiaz/Desktop/Proyecto-Final-FPGA-DSP/Integracion/source/adc_logic.v Line: 18

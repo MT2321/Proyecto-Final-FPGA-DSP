@@ -54,5 +54,8 @@ module scaler(value, prescaler, val_out);
       else if (prescaler<=65536)begin
         val_out = value[39:28];
       end
+		else begin
+		  val_out = value[24:13];
+		end
 	end
 endmodule

@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -21,59 +21,59 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 248 144)
-	(text "Graphiker" (rect 5 0 74 20)(font "Intel Clear" (font_size 8)))
-	(text "inst" (rect 8 105 31 124)(font "Intel Clear" ))
+	(rect 16 16 224 144)
+	(text "Graphiker" (rect 5 0 64 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 107 24 124)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "pin_name1" (rect 0 0 79 20)(font "Intel Clear" (font_size 8)))
-		(text "pin_name1" (rect 21 27 100 47)(font "Intel Clear" (font_size 8)))
+		(text "WCLK" (rect 0 0 35 19)(font "Intel Clear" (font_size 8)))
+		(text "WCLK" (rect 21 27 56 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "value[11..0]" (rect 0 0 83 20)(font "Intel Clear" (font_size 8)))
-		(text "value[11..0]" (rect 21 43 104 63)(font "Intel Clear" (font_size 8)))
+		(text "value[11..0]" (rect 0 0 70 19)(font "Intel Clear" (font_size 8)))
+		(text "value[11..0]" (rect 21 43 91 62)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 0 64)
 		(input)
-		(text "VGA_CLK" (rect 0 0 64 20)(font "Intel Clear" (font_size 8)))
-		(text "VGA_CLK" (rect 21 59 85 79)(font "Intel Clear" (font_size 8)))
+		(text "VGA_CLK" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
+		(text "VGA_CLK" (rect 21 59 77 78)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port
 		(pt 0 80)
 		(input)
-		(text "ONE" (rect 0 0 30 20)(font "Intel Clear" (font_size 8)))
-		(text "ONE" (rect 21 75 51 95)(font "Intel Clear" (font_size 8)))
+		(text "ONE" (rect 0 0 25 19)(font "Intel Clear" (font_size 8)))
+		(text "ONE" (rect 21 75 46 94)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 80)(pt 16 80))
 	)
 	(port
-		(pt 232 32)
+		(pt 208 32)
 		(output)
-		(text "PIXEL_VALUE" (rect 0 0 94 20)(font "Intel Clear" (font_size 8)))
-		(text "PIXEL_VALUE" (rect 117 27 211 47)(font "Intel Clear" (font_size 8)))
-		(line (pt 232 32)(pt 216 32))
+		(text "PIXEL_VALUE" (rect 0 0 81 19)(font "Intel Clear" (font_size 8)))
+		(text "PIXEL_VALUE" (rect 106 27 187 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 208 32)(pt 192 32))
 	)
 	(port
-		(pt 232 48)
+		(pt 208 48)
 		(output)
-		(text "H_SYNC" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
-		(text "H_SYNC" (rect 154 43 211 63)(font "Intel Clear" (font_size 8)))
-		(line (pt 232 48)(pt 216 48))
+		(text "H_SYNC" (rect 0 0 50 19)(font "Intel Clear" (font_size 8)))
+		(text "H_SYNC" (rect 137 43 187 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 208 48)(pt 192 48))
 	)
 	(port
-		(pt 232 64)
+		(pt 208 64)
 		(output)
-		(text "V_SYNC" (rect 0 0 56 20)(font "Intel Clear" (font_size 8)))
-		(text "V_SYNC" (rect 155 59 211 79)(font "Intel Clear" (font_size 8)))
-		(line (pt 232 64)(pt 216 64))
+		(text "V_SYNC" (rect 0 0 49 19)(font "Intel Clear" (font_size 8)))
+		(text "V_SYNC" (rect 138 59 187 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 208 64)(pt 192 64))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 112))
+		(rectangle (rect 16 16 192 112))
 	)
 )
