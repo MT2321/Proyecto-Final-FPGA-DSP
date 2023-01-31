@@ -7,3 +7,12 @@ test_ian/*.qws
 test_ian/*.bak
 test_ian/*.qdf
 test_ian/*.inc
+*/db
+*/incremental_db
+*/output_files
+*/simulation
+*/*.qsf
+*/*.qws
+*/*.bak
+*/*.qdf
+*/*.inc
