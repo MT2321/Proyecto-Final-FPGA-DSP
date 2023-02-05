@@ -564,6 +564,6 @@
      END IF; 
    END PROCESS Output_Register_process;
  
-     filter_out <= resize(output_register/339,12);--std_logic_vector(output_register);
+     filter_out <= resize(output_register/300,12);--std_logic_vector(output_register);
  
  end rtl;

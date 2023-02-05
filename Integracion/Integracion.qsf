@@ -69,6 +69,10 @@ set_location_assignment PIN_D1 -to VALUE[4]
 set_location_assignment PIN_F3 -to VALUE[5]
 set_location_assignment PIN_B1 -to VALUE[6]
 set_location_assignment PIN_L3 -to VALUE[7]
+set_global_assignment -name VHDL_FILE source/filters_source/FIR_LOWPASS.vhd
+set_global_assignment -name VHDL_FILE source/filters_source/FIR_HIGHPASS.vhd
+set_global_assignment -name VHDL_FILE source/filters_source/FIR_BANDPASS.vhd
+set_global_assignment -name VERILOG_FILE source/twoc.v
 set_global_assignment -name VHDL_FILE source/LOGSCALE.vhd
 set_global_assignment -name VHDL_FILE source/filters_source/lp.vhd
 set_global_assignment -name VHDL_FILE source/filters_source/hp1.vhd

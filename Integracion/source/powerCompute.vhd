@@ -32,7 +32,7 @@ BEGIN
 	  variable mul_temp                         : signed(23 DOWNTO 0); -- sfix24_En27
 	  variable output_register                  : signed(31 DOWNTO 0); -- sfix12_En27
 	  variable power_output                     : signed(41 DOWNTO 0); -- sfix12_En27
-	  variable temp_power 								: signed(41 DOWNTO 0); -- sfix12_En27 
+	  variable temp_power 							  : signed(41 DOWNTO 0); -- sfix12_En27 
 	  
   
   BEGIN
