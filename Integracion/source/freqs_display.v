@@ -31,7 +31,7 @@ module freqs_display(bin1_in, bin2_in, bin3_in, bin4_in, bin5_in, bin6_in, bin7_
     localparam amount_of_bins = 10;     // Cantidad de bins de frecuencias
     localparam bin_width = screen_width / amount_of_bins; // Ancho de cada bin de frecuencias
 	 
-	localparam num_samples = 4096;
+	localparam num_samples = 16000;
 
     initial begin
         set_values_flag <= 0;           // inicializamos el flag en 0
