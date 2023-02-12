@@ -287,32 +287,48 @@ https://fpgasoftware.intel.com/eula.
 )
 (symbol
 	(rect 896 120 1080 200)
-	(text "pixel_discriminator" (rect 5 0 95 12)(font "Arial" ))
-	(text "PIX_DISCR" (rect 8 64 59 81)(font "Intel Clear" ))
+	(text "pixel_disc" (rect 5 0 53 12)(font "Arial" ))
+	(text "asdafsdf" (rect 8 64 52 76)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
-		(text "value[11..0]" (rect 0 0 59 12)(font "Arial" ))
-		(text "value[11..0]" (rect 21 27 80 39)(font "Arial" ))
+		(text "i_value[11..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "i_value[11..0]" (rect 21 27 88 39)(font "Arial" ))
 		(line (pt 0 32)(pt 16 32)(line_width 3))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "pixel_y[9..0]" (rect 0 0 61 12)(font "Arial" ))
-		(text "pixel_y[9..0]" (rect 21 43 82 55)(font "Arial" ))
+		(text "i_pixel_y[9..0]" (rect 0 0 69 12)(font "Arial" ))
+		(text "i_pixel_y[9..0]" (rect 21 43 90 55)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
 		(pt 184 32)
 		(output)
-		(text "out_pixel" (rect 0 0 43 12)(font "Arial" ))
-		(text "out_pixel" (rect 115 27 158 39)(font "Arial" ))
+		(text "o_pixel" (rect 0 0 34 12)(font "Arial" ))
+		(text "o_pixel" (rect 135 27 169 39)(font "Arial" ))
 		(line (pt 184 32)(pt 168 32))
 	)
+	(parameter
+		"screen_height"
+		"600"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"trace_width"
+		"15"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"div_constant"
+		"7"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 168 64))
 	)
+	(annotation_block (parameter)(rect 1080 40 1268 116))
 )
 (connector
 	(text "PIXEL_X_POS[9..0]" (rect 754 472 848 489)(font "Intel Clear" (color 0 85 0)(bold)))
