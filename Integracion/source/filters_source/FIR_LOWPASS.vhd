@@ -1,6 +1,6 @@
 
  -- FIR_LOWPASS.vhd
- -- 2023-02-05 18:03:24.821953
+ -- 2023-02-13 14:42:38.551142
  -- This filter has 45 taps
  -- The number of bits for the coefficients is 8
  -- The number of bits for the samples is 12
@@ -26,49 +26,49 @@
      TYPE delay_pipeline_type IS ARRAY (NATURAL range <>) OF signed(11 DOWNTO 0); -- sfix16_En15
      
      CONSTANT coeff1                         : signed(7 DOWNTO 0) := to_signed(0, 8);
- CONSTANT coeff2                         : signed(7 DOWNTO 0) := to_signed(1, 8);
+ CONSTANT coeff2                         : signed(7 DOWNTO 0) := to_signed(0, 8);
  CONSTANT coeff3                         : signed(7 DOWNTO 0) := to_signed(1, 8);
- CONSTANT coeff4                         : signed(7 DOWNTO 0) := to_signed(3, 8);
- CONSTANT coeff5                         : signed(7 DOWNTO 0) := to_signed(5, 8);
- CONSTANT coeff6                         : signed(7 DOWNTO 0) := to_signed(8, 8);
- CONSTANT coeff7                         : signed(7 DOWNTO 0) := to_signed(12, 8);
- CONSTANT coeff8                         : signed(7 DOWNTO 0) := to_signed(17, 8);
- CONSTANT coeff9                         : signed(7 DOWNTO 0) := to_signed(23, 8);
- CONSTANT coeff10                         : signed(7 DOWNTO 0) := to_signed(30, 8);
- CONSTANT coeff11                         : signed(7 DOWNTO 0) := to_signed(38, 8);
- CONSTANT coeff12                         : signed(7 DOWNTO 0) := to_signed(47, 8);
- CONSTANT coeff13                         : signed(7 DOWNTO 0) := to_signed(56, 8);
- CONSTANT coeff14                         : signed(7 DOWNTO 0) := to_signed(66, 8);
- CONSTANT coeff15                         : signed(7 DOWNTO 0) := to_signed(76, 8);
- CONSTANT coeff16                         : signed(7 DOWNTO 0) := to_signed(86, 8);
- CONSTANT coeff17                         : signed(7 DOWNTO 0) := to_signed(96, 8);
- CONSTANT coeff18                         : signed(7 DOWNTO 0) := to_signed(105, 8);
- CONSTANT coeff19                         : signed(7 DOWNTO 0) := to_signed(112, 8);
- CONSTANT coeff20                         : signed(7 DOWNTO 0) := to_signed(119, 8);
- CONSTANT coeff21                         : signed(7 DOWNTO 0) := to_signed(123, 8);
- CONSTANT coeff22                         : signed(7 DOWNTO 0) := to_signed(126, 8);
+ CONSTANT coeff4                         : signed(7 DOWNTO 0) := to_signed(1, 8);
+ CONSTANT coeff5                         : signed(7 DOWNTO 0) := to_signed(1, 8);
+ CONSTANT coeff6                         : signed(7 DOWNTO 0) := to_signed(0, 8);
+ CONSTANT coeff7                         : signed(7 DOWNTO 0) := to_signed(-1, 8);
+ CONSTANT coeff8                         : signed(7 DOWNTO 0) := to_signed(-3, 8);
+ CONSTANT coeff9                         : signed(7 DOWNTO 0) := to_signed(-7, 8);
+ CONSTANT coeff10                         : signed(7 DOWNTO 0) := to_signed(-11, 8);
+ CONSTANT coeff11                         : signed(7 DOWNTO 0) := to_signed(-14, 8);
+ CONSTANT coeff12                         : signed(7 DOWNTO 0) := to_signed(-16, 8);
+ CONSTANT coeff13                         : signed(7 DOWNTO 0) := to_signed(-15, 8);
+ CONSTANT coeff14                         : signed(7 DOWNTO 0) := to_signed(-10, 8);
+ CONSTANT coeff15                         : signed(7 DOWNTO 0) := to_signed(-1, 8);
+ CONSTANT coeff16                         : signed(7 DOWNTO 0) := to_signed(13, 8);
+ CONSTANT coeff17                         : signed(7 DOWNTO 0) := to_signed(31, 8);
+ CONSTANT coeff18                         : signed(7 DOWNTO 0) := to_signed(52, 8);
+ CONSTANT coeff19                         : signed(7 DOWNTO 0) := to_signed(75, 8);
+ CONSTANT coeff20                         : signed(7 DOWNTO 0) := to_signed(95, 8);
+ CONSTANT coeff21                         : signed(7 DOWNTO 0) := to_signed(112, 8);
+ CONSTANT coeff22                         : signed(7 DOWNTO 0) := to_signed(123, 8);
  CONSTANT coeff23                         : signed(7 DOWNTO 0) := to_signed(127, 8);
- CONSTANT coeff24                         : signed(7 DOWNTO 0) := to_signed(126, 8);
- CONSTANT coeff25                         : signed(7 DOWNTO 0) := to_signed(123, 8);
- CONSTANT coeff26                         : signed(7 DOWNTO 0) := to_signed(119, 8);
- CONSTANT coeff27                         : signed(7 DOWNTO 0) := to_signed(112, 8);
- CONSTANT coeff28                         : signed(7 DOWNTO 0) := to_signed(105, 8);
- CONSTANT coeff29                         : signed(7 DOWNTO 0) := to_signed(96, 8);
- CONSTANT coeff30                         : signed(7 DOWNTO 0) := to_signed(86, 8);
- CONSTANT coeff31                         : signed(7 DOWNTO 0) := to_signed(76, 8);
- CONSTANT coeff32                         : signed(7 DOWNTO 0) := to_signed(66, 8);
- CONSTANT coeff33                         : signed(7 DOWNTO 0) := to_signed(56, 8);
- CONSTANT coeff34                         : signed(7 DOWNTO 0) := to_signed(47, 8);
- CONSTANT coeff35                         : signed(7 DOWNTO 0) := to_signed(38, 8);
- CONSTANT coeff36                         : signed(7 DOWNTO 0) := to_signed(30, 8);
- CONSTANT coeff37                         : signed(7 DOWNTO 0) := to_signed(23, 8);
- CONSTANT coeff38                         : signed(7 DOWNTO 0) := to_signed(17, 8);
- CONSTANT coeff39                         : signed(7 DOWNTO 0) := to_signed(12, 8);
- CONSTANT coeff40                         : signed(7 DOWNTO 0) := to_signed(8, 8);
- CONSTANT coeff41                         : signed(7 DOWNTO 0) := to_signed(5, 8);
- CONSTANT coeff42                         : signed(7 DOWNTO 0) := to_signed(3, 8);
+ CONSTANT coeff24                         : signed(7 DOWNTO 0) := to_signed(123, 8);
+ CONSTANT coeff25                         : signed(7 DOWNTO 0) := to_signed(112, 8);
+ CONSTANT coeff26                         : signed(7 DOWNTO 0) := to_signed(95, 8);
+ CONSTANT coeff27                         : signed(7 DOWNTO 0) := to_signed(75, 8);
+ CONSTANT coeff28                         : signed(7 DOWNTO 0) := to_signed(52, 8);
+ CONSTANT coeff29                         : signed(7 DOWNTO 0) := to_signed(31, 8);
+ CONSTANT coeff30                         : signed(7 DOWNTO 0) := to_signed(13, 8);
+ CONSTANT coeff31                         : signed(7 DOWNTO 0) := to_signed(-1, 8);
+ CONSTANT coeff32                         : signed(7 DOWNTO 0) := to_signed(-10, 8);
+ CONSTANT coeff33                         : signed(7 DOWNTO 0) := to_signed(-15, 8);
+ CONSTANT coeff34                         : signed(7 DOWNTO 0) := to_signed(-16, 8);
+ CONSTANT coeff35                         : signed(7 DOWNTO 0) := to_signed(-14, 8);
+ CONSTANT coeff36                         : signed(7 DOWNTO 0) := to_signed(-11, 8);
+ CONSTANT coeff37                         : signed(7 DOWNTO 0) := to_signed(-7, 8);
+ CONSTANT coeff38                         : signed(7 DOWNTO 0) := to_signed(-3, 8);
+ CONSTANT coeff39                         : signed(7 DOWNTO 0) := to_signed(-1, 8);
+ CONSTANT coeff40                         : signed(7 DOWNTO 0) := to_signed(0, 8);
+ CONSTANT coeff41                         : signed(7 DOWNTO 0) := to_signed(1, 8);
+ CONSTANT coeff42                         : signed(7 DOWNTO 0) := to_signed(1, 8);
  CONSTANT coeff43                         : signed(7 DOWNTO 0) := to_signed(1, 8);
- CONSTANT coeff44                         : signed(7 DOWNTO 0) := to_signed(1, 8);
+ CONSTANT coeff44                         : signed(7 DOWNTO 0) := to_signed(0, 8);
  CONSTANT coeff45                         : signed(7 DOWNTO 0) := to_signed(0, 8);
  
      signal delay_pipeline : delay_pipeline_type(0 to 44);
@@ -564,6 +564,6 @@
      END IF; 
    END PROCESS Output_Register_process;
  
-     filter_out <= resize(output_register/2600,12);--std_logic_vector(output_register);
+     filter_out <= resize((output_register/1055),12);--std_logic_vector(output_register);
  
  end rtl;

@@ -26,7 +26,7 @@ begin
 		v_y_value := to_integer(screen_height - i_pixel_y);		
 		v_div	:=	to_integer(i_value)/div_constant;
 		
-		if( (v_div > v_y_value) and (v_div < (v_y_value + trace_width)) ) then
+		if( (v_div > v_y_value - trace_width) and (v_div < (v_y_value)) ) then
 			o_pixel <= '1';
 		else
 			o_pixel <= '0';

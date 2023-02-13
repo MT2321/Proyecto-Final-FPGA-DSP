@@ -1,0 +1,43 @@
+module ps_select_2 (
+    in;
+    out;
+);
+    
+    input in;
+    output reg [15:0] out;
+    
+    localparam ps1 = 100;
+    localparam ps1 = 200;
+    localparam ps1 = 500;
+    localparam ps1 = 1000;
+    localparam ps1 = 1000;
+    
+    reg [3:0]count;
+
+    initial begin
+        count = 0;
+        out=ps1;
+    end
+
+    always @(posedge in) begin
+        count <= count + 1;
+        if (count == 0) begin
+            out <= ps1;
+        end
+        else if (count == 1) begin
+            out <= ps2;
+        end
+        else if (count == 2) begin
+            out <= ps3;
+        end
+        else if (count == 3) begin
+            out <= ps4;
+        end
+        else if (count == 4) begin
+            out <= ps5;
+        end
+        else begin
+            out <= ps1;
+        end
+    end
+endmodule

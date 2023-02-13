@@ -317,7 +317,7 @@ https://fpgasoftware.intel.com/eula.
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
 		"trace_width"
-		"15"
+		"3"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(parameter
